@@ -49,15 +49,15 @@ const thirdPromise = new Promise((resolve) => {
     if (e.button === 2) {
       rightClick = true;
     }
+  });
 
-    document.addEventListener('contextmenu', (ev) => {
-      ev.preventDefault();
-      rightClick = true;
+  document.addEventListener('contextmenu', (ev) => {
+    ev.preventDefault();
+    rightClick = true;
 
-      if (leftClick && rightClick) {
-        resolve('Third promise was resolved');
-      }
-    });
+    if (leftClick && rightClick) {
+      resolve('Third promise was resolved');
+    }
   });
 });
 
